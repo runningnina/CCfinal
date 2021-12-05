@@ -18,6 +18,7 @@ import Profile from "views/Profile.js";
 
 import Companies from "components/Company/Companies.js"
 import Events from "components/Events/Events.js"
+import QuestionMain from "components/Questions/QuestionMain"
 
 ReactDOM.render(
   <BrowserRouter>
@@ -26,6 +27,7 @@ ReactDOM.render(
       {/* <Route path="/admin" component={Admin} /> */}
       <Route path="/auth" component={Auth} />
       <Route path="/companies" component={Companies} />
+      <Route path="/questions/:name" component={QuestionMain} />
       <Route path="/events" exact component={Events} />
       {/* add routes without layouts */}
       <Route path="/" exact component={Landing} />

@@ -37,6 +37,27 @@ def getEvents():
     return {'data':events}
 
 
+@app.route('/getQuestionCompany')
+def getQuestionCompany():
+    tnames=[]
+    ntnames=[]
+    for i in range(0,5):
+        tnames.append(i)
+        ntnames.append(5-i)
+    return {'datat':tnames,'datant':ntnames}
+
+
+@app.route("/getQuestionCompanyName", methods = ["POST"], strict_slashes = False)
+def getQuestionCompanyName():
+   name = request.json['name']
+   print(name)
+   # fetch questions and answers for the given company name
+   list=[]
+   for i in range(0,5):
+       list.append({'question':'Whatsupp? {}'.format(i),'answer':'All Cool {}'.format(i)})
+   return{'data':list}
+
+
 if __name__ == '__main__':
   app.run(debug=True)
 

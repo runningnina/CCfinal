@@ -9,7 +9,6 @@ import job from '../../assets/img/job.png'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Details from './Details';
-import { render } from 'react-dom';
 
 const useStyles = makeStyles((theme) => ({
     card: {
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 const DispCard = (props) => {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const [ret,setRet] = useState(false)
     const [long,setLong] = useState()
     const [link,setLink] = useState()
